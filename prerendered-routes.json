@@ -1,0 +1,18 @@
+{
+  "routes": [
+    "/about-us",
+    "/blog",
+    "/contact-us",
+    "/export",
+    "/home",
+    "/home/most",
+    "/home/offers",
+    "/home/special",
+    "/loading",
+    "/register",
+    "/shop",
+    "/shopping",
+    "/store",
+    "/wishlist"
+  ]
+}
