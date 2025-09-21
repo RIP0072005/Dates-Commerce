@@ -1,0 +1,23 @@
+@import './assets/bootstrap/css/bootstrap.min.css';
+:root{
+  --main-color:  #8b0203;
+  --sub-color: #98070b;
+  --shadow-color: #2ef1ff;
+  --head-font: "Cairo", sans-serif;
+  --body-font: "Noto Sans Arabic", sans-serif;
+  
+}
+
+body {
+  font-family: var(--font-body) !important;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+}
+
+a{
+  text-decoration: none;
+}

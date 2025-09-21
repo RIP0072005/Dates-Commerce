@@ -1,0 +1,77 @@
+<div class="box px-5">
+    <figure class="position-relative">
+        <img src="../../assets/images/pannerTopLeft.jpg" alt="">
+        <a routerLink="/shop" class="text-black position-absolute text-decoration-underline" style="left: 10%;">للمزيد من العروض</a>
+    </figure>
+    <figure class="position-relative">
+        <img src="../../assets/images/pannerBottom.jpg" alt="">
+        <a routerLink="/shop" class="text-black position-absolute text-decoration-underline" style="left: 10%;">للمزيد من العروض</a>
+    </figure>
+    <figure class="position-relative">
+        <img src="../../assets/images/pannerTopRight.jpg" alt="">
+        <a routerLink="/shop" class="text-black position-absolute text-decoration-underline" style="left: 10%;">للمزيد من العروض</a>
+    </figure>
+</div>
+
+<div class="my-5">
+    <nav class="nav justify-content-center my-3 border-bottom pb-1">
+        <a class="btn position-relative" routerLink="offers" >العروض</a>
+        <a class="btn position-relative" routerLink="special">المميزة</a>
+        <a class="btn position-relative" routerLink="most">الأكثر مبيعاً</a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+
+<article>
+    <h6 class="text-center" style="color: var(--main-color);">تمور الوادي</h6>
+    <h1 class="text-center">أبرز انواع التمور</h1>
+    <p class="card-text text-secondary m-auto text-center">انواع عديدة ... لطعم افضل</p>
+    <div class="d-flex m-5">
+        <div class="article-card position-relative overflow-hidden mx-2">
+            <img src="../../assets/images/e-dates.png" style="transition: .7s transform, .7s filter; width: 100%;"  alt="">
+            <h4 class="position-absolute start-50 top-50 translate-middle text-light px-4 py-3" style="background-color: var(--main-color);">التمر المصري</h4>
+        </div>
+        <div class="article-card position-relative overflow-hidden mx-2">
+            <img src="../../assets/images/s-dates.png" style="transition: .7s transform, .7s filter; width: 100%;" alt="">
+            <h4 class="position-absolute start-50 top-50 translate-middle text-light px-4 py-3" style="background-color: var(--main-color);">التمر السعودي</h4>
+        </div>
+        <div class="article-card position-relative overflow-hidden mx-2">
+            <img src="../../assets/images/Elite.png" style="transition: .7s transform, .7s filter; width: 100%;" alt="">
+            <h4 class=" position-absolute start-50 top-50 translate-middle text-light px-4 py-3" style="background-color: var(--main-color);">Elite</h4>
+        </div>
+    </div>
+</article>
+
+<div class="mb-5">
+  <h5 class="text-center lead" style="color: var(--sub-main);">عملاء الطحان</h5>
+  <h3 class="text-center">آراء العملاء عن الطحان</h3>
+
+  <div class="carousel-1">
+    <div class="carousel-inner-1" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+      @for(img of images; track $index) {
+        <div class="carousel-item-1">
+          <img [src]="img" alt="carousel-image-1">
+        </div>
+      }
+    </div>
+
+    <button class="carousel-control-prev-1" (click)="prev()">&#10094;</button>
+    <button class="carousel-control-next-1" (click)="next()">&#10095;</button>
+  </div>
+</div>
+
+<div class="mb-5">
+  <h5 class="text-center lead" style="color: var(--sub-main);">عملاء الطحان</h5>
+  <h3 class="text-center">آراء العملاء عن الطحان</h3>
+    <div class="m-0 p-0 position-relative">
+        <img src="../../assets/images/pannerTopLeft.jpg" class="object-fit-cover w-100" alt="">
+        <div class="d-flex w-100 position-absolute justify-content-center align-items-center start-50 top-50 translate-middle">
+            <a class="p-1" href="https://www.tiktok.com/"><i class="fab fa-xl mx-3 text-white-50 fa-tiktok"></i></a>
+            <a class="p-1" href="https://www.whatsapp.com/"><i class="fab fa-xl mx-3 text-white-50 fa-whatsapp"></i></a>
+            <a class="p-1" href="https://www.linkedin.com/"><i class="fab fa-xl mx-3 text-white-50 fa-linkedin-in"></i></a>
+            <a class="p-1" href="https://www.youtube.com/"><i class="fab fa-xl mx-3 text-white-50 fa-youtube"></i></a>
+            <a class="p-1" href="https://www.instgram.com/"><i class="fab fa-xl mx-3 text-white-50 fa-instagram"></i></a>
+            <a class="p-1" href="https://www.facebook.com/"><i class="fab fa-xl mx-3 text-white-50 fa-facebook-f"></i></a>            
+        </div>
+    </div>
+</div>

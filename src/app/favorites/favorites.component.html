@@ -1,0 +1,27 @@
+@if(_VarsService.favorites()){
+    <h1 class="text-center text-primary">Here is ur Wishlist, we hope u like it</h1>
+    <div class="row">
+    @for(product of ps; track $index){
+        
+        @if( product.isFav){
+            <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                <div class="card pb-4 border-0" style="width: 18rem;">
+                    <div class="box position-relative">
+                        <img [src]='product.image' class="card-img-top">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="text-secondary card-text">{{product.description}}</p>
+                        <p class="card-text fw-bold" style="color: var(--main-color); font-size: 14px;">{{product.price}}.00 EGP</p>
+                    </div>
+                </div>   
+            </div>
+        }
+    }
+    </div>
+}@else{
+    <div class="bg-danger py-5">
+    <h2 class="text-center text-info">There is no wishlist (yet)</h2>
+    <h3 class="text-center text-primary">Click <a routerLink="/shop" class="text-decoration-underline fw-bold">here</a> to add some</h3>
+    </div>
+}

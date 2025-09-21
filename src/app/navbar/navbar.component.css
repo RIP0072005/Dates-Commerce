@@ -1,0 +1,50 @@
+#symbol::after, #facebook::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: -20%;
+    height: 250%;
+    width: 2px;
+    background-color: white;
+    translate: 0 -25%;
+}
+
+.brand-icons:hover{
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+a i:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+a{
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+
+
+nav a::after, nav a:focus::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0px;
+    background-color: var(--main-color);
+    top: 85%;
+    right: 10%;
+    transition: width .25s;
+}
+
+nav a:hover::after, nav a:focus::after{
+    width: 80%;
+}
+
+.scroll{
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    color: white;
+    font-size: 12px;
+    z-index: 2056;
+}

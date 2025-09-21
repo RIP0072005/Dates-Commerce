@@ -1,0 +1,12 @@
+.box:hover .details{
+    visibility: visible; 
+    transition: all .15s;
+}
+
+.details{
+    visibility: hidden;  
+}
+
+i:hover{
+    color: rgba(0, 0, 0, 0.6);
+}

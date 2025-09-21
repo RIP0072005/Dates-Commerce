@@ -1,0 +1,76 @@
+<div class="container-fluid pt-3" style="background-color: var(--main-color);">
+    <div id="1" class="d-flex justify-content-center align-items-baseline">
+        <div id="facebook" class="d-flex ps-4 pe-3 position-relative">
+            <a href="https://www.tiktok.com/"><i class="brand-icons fab mx-2 text-white fa-tiktok"></i></a>
+            <a href="https://www.whatsapp.com/"><i class="brand-icons fab mx-2 text-white fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/"><i class="brand-icons fab mx-2 text-white fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/"><i class="brand-icons fab mx-2 text-white fa-youtube"></i></a>
+            <a href="https://www.instgram.com/"><i class="brand-icons fab mx-2 text-white fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="brand-icons fab ms-1 text-white fa-facebook-f"></i></a>            
+        </div>
+
+        <div id="symbol" class="text-end text-white pe-2 me-2 position-relative"style="width: 60%;" >مرحبا بكم في تمور الوادي</div>
+
+        <div class="d-flex justify-content-center align-items-baseline text-white gap-2">
+            <p>English</p>
+            <img src="../../assets/images/en_US.png" width="18px" height="12px">
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex align-items-center mx-5 py-2 px-3">
+    <div class="col-4">
+        <div class="d-flex w-100 justify-content-between align-items-center">
+            <span class="position-relative">
+                <a routerLink="/shopping" class="text-black">
+                    <i class="fas fa-xl fa-shopping-bag"></i>
+                    <span class="position-absolute bg-danger rounded-circle text-center text-white" style="width: 17px; height: 17px; font-size: 11px; left: -36%; top: -14%;">{{ _VarsService.sales()}}</span>
+                </a> 
+            </span>
+            <span class="position-relative">
+                <a routerLink="/wishlist" class="text-black">
+                    <i class="far fa-xl fa-heart"></i>
+                    <span class="position-absolute bg-danger rounded-circle text-center text-white" style="width: 17px; height: 17px; font-size: 11px; left: -36%; top: -14%;">{{ _VarsService.favorites()}}</span>
+                </a>
+            </span>
+            <a routerLink='/register' style="font-size: 18px;">Login / Register</a>     
+        </div>
+    </div><div class="d-flex justify-content-center col-4">
+        <img src="../../assets/images/logo.png" routerLink="/home" style="width: 170px; height: 80px;">
+    </div><div class="col-4">
+        <div class="d-flex w-100 justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-phone fa-xl" style="color: var(--main-color);"></i>
+                <div class="d-flex flex-column align-items-center">
+                    <p class="m-0 fw-bold" style="color: var(--main-color);">الخط الساخن</p>
+                    <a href="#"class="m-0">12345</a>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="fab fa-whatsapp fa-xl" style="color: var(--main-color);"></i>
+                <div class="d-flex flex-column align-items-center">
+                    <p class="m-0 fw-bold" style="color: var(--main-color);">راسلنا عبر الواتساب</p>
+                    <a href="#" class="m-0">0123456789</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="my-5">
+    <nav class="nav justify-content-center my-3 border-bottom pb-1" id="nav-tab-1" role="tablist-1">
+        <a class="btn position-relative" routerLink="/export" routerLinkActive="active-btn" >التصدير</a>
+        <a class="btn position-relative" routerLink="/blog" routerLinkActive="active-btn">مقالات</a>
+        <a class="btn position-relative" routerLink="/contact-us" routerLinkActive="active-btn">تواصل معنا</a>
+        <a class="btn position-relative" routerLink="/about-us" routerLinkActive="active-btn">من نحن</a>
+        <a class="btn position-relative" routerLink="/store" routerLinkActive="active-btn">الفروع</a>
+        <a class="btn position-relative" routerLink="/shop" routerLinkActive="active-btn">المتجر</a>
+        <a class="btn position-relative" routerLink='/home' routerLinkActive="active-btn">الرئيسية</a>
+    </nav>
+</div>
+
+<button class="scroll btn rounded-circle position-fixed text-white" 
+        style="background-color: var(--sub-color);" 
+        (click)="scrollToTop()">
+  &uarr;
+</button>

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    border:1px ridge rgba(168, 163, 163, 0.192);
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    width: calc(100% / 2 - 3rem);
+}
+
+.box:not(button){
+    color: var(--sub-color);
+}
+
+.box:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+h1{
+    font-weight: 600;
+}
+
+button{
+    background-color: var(--sub-color);
+    margin: 1rem;
+    border: none;
+    
+}

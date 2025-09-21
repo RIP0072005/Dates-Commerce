@@ -1,0 +1,48 @@
+<h2 class="text-center py-4">Shop</h2>
+@if (!selectedProduct){
+<div class="row px-5">
+    @for( product of p1; track $index){
+    <div  class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card pb-4 border-0" style="width: 18rem;">
+            <div class="box position-relative">
+                <img [src]='product.image' class="card-img-top">
+                <div class="details d-flex justify-content-evenly w-75 text-secondary position-absolute bg-white px-2 py-3" style="bottom: 4%;left: 50%;transform: translateX(-50%);">
+                @if (product.isSale){
+                <i (click)="Shopping(product)" class="fas fa-xl fa-shopping-bag text-primary"></i>
+                }@else{
+                <i (click)="Shopping(product)" class="fas fa-xl fa-shopping-bag"></i>}
+                @if (product.isFav){
+                <i (click)="Wishlist(product)" class="fas fa-xl fa-heart text-danger"></i>
+                }@else{
+                <i (click)="Wishlist(product)" class="far fa-xl fa-heart"></i>
+                }
+                <i (click)="viewDetails(product)" class="fas fa-xl fa-search"></i>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <h5 dir="rtl" class="card-title">{{product.name}}</h5>
+                <p class="text-secondary card-text">{{product.description}}</p>
+                <p class="card-text fw-bold" style="color: var(--main-color); font-size: 14px;">{{product.price}}.00 EGP</p>
+            </div>
+        </div>   
+    </div>
+    } 
+</div>}@else{
+    <div class="d-flex justify-content-center p-5" style="background-color: var(--main-color);">
+        <div class="card pb-4 border-0" style="width: 22rem;">
+            <img [src]='selectedProduct.image' class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{selectedProduct.name}}</h5>
+                <p class="text-secondary card-text">{{selectedProduct.description}}</p>
+                <p class="card-text fw-bold" style="color: var(--main-color); font-size: 14px;">{{selectedProduct.price}}.00 EGP</p>
+                <div class="d-flex justify-content-evenly px-3 py-2">
+                    <button (click)="Wishlist(selectedProduct)" class="btn btn-outline-danger mx-2">Add to wishlist</button>
+                    <button (click)="Shopping(selectedProduct)" class="btn btn-outline-warning mx-2">Add to Shopping Cart</button>
+               </div>
+               <button (click)="backList()" class="btn btn-info my-2">Back to List</button>
+           </div>
+        </div> 
+    </div>
+}
+
+

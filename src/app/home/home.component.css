@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+  columns: 500px;
+}
+
+figure img{
+  object-fit: cover;
+  width: 100%;
+}
+
+figure{
+  margin: 10px;
+}
+
+a{
+    top: 10%;
+    border: none;
+}
+
+nav a::after, nav a:focus::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0px;
+    background-color: var(--main-color);
+    top: 85%;
+    right: 10%;
+    transition: width .25s;
+}
+
+
+nav a:hover::after, nav a:focus::after{
+    width: 80%;
+}
+
+.article-card{
+    width: calc(100% / 3);
+}
+.article-card:hover img{
+    transform: scale(1.1);
+    filter: brightness(.7);
+}
+
+.article-card h4{
+    transition: opacity .2s ease-out .4s;
+}
+
+.article-card:hover h4{
+    transition: opacity .2s ease-in .3s ;
+}
+.article-card:hover h4, .article-card::after{
+    opacity: 0;
+}
+.article-card::after{
+    transition: opacity .2s ease-in;
+    content: "Products 05";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    color: rgb(255, 255, 255);
+}
+
+ .article-card:hover::after{
+    opacity: 1;
+    transition: opacity .3s ease-out .5s;
+}
+
+
+.carousel-1 {
+  position: relative;
+  width: 85%;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+
+.carousel-inner-1 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-item-1 {
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-item-1 img {
+    width: 85%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 7%;
+}
+
+.carousel-control-prev-1,
+.carousel-control-next-1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--main-color);
+  color: white;  
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel-control-prev-1:hover,
+.carousel-control-next-1:hover {
+  background-color: var(--sub-color);
+}
+
+.carousel-control-prev-1 {
+  left: 15px;
+}
+
+.carousel-control-next-1 {
+  right: 15px;
+}
+
+
+a:hover i{
+    background-color: rgba(0, 0, 0, 0.4);
+}
